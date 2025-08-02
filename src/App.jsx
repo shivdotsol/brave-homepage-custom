@@ -1,4 +1,5 @@
 import Shortcut from "./components/Shortcut";
+import Todo from "./components/Todo";
 
 function App() {
     const shortcuts = [
@@ -64,13 +65,15 @@ function App() {
         },
     ];
     return (
-        <div className="h-screen flex justify-between px-12 py-24 bg-neutral-900 text-neutral-100">
-            <div className="h-[230px] grid grid-cols-6">
+        <div className="h-screen flex justify-between px-12 py-14 bg-gradient-to-tr from-zinc-800 to-neutral-950 text-neutral-100">
+            <div className="h-[230px] grid grid-cols-6 mt-2">
                 {shortcuts.map((i) => (
                     <Shortcut name={i.name} url={i.url} img={i.img} />
                 ))}
             </div>
-            <div></div>
+            <div>
+                <Todo />
+            </div>
         </div>
     );
 }
